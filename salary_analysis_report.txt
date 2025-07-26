@@ -1,0 +1,56 @@
+# ULUSLARARASI MAAŞ ANALİZİ RAPORU
+==================================================
+
+Analiz Tarihi: 2025-07-26 11:33:39
+Veri Yılı: 2023
+Kullanılan Döviz Kurları:
+  - TRY/USD: 19.07
+  - EUR/USD: 1.08
+
+
+## 1. DOĞRUDAN KARŞILAŞTIRMA ANALİZİ
+----------------------------------------
+
+### TR vs EU
+Genel Oran: EU maaşları TR'den 27.57 kat fazla
+🔴 Önemli fark: EU bölgesi önemli ölçüde daha yüksek maaş sunuyor
+
+### TR vs US
+Genel Oran: US maaşları TR'den 19.07 kat fazla
+🔴 Önemli fark: US bölgesi önemli ölçüde daha yüksek maaş sunuyor
+
+### EU vs US
+Genel Oran: US maaşları EU'den 0.74 kat fazla
+🟡 Dikkat: EU bölgesi daha yüksek maaş sunuyor
+
+
+## 2. DERİNLEMESİNE REFAH ANALİZİ
+----------------------------------------
+
+### TR Bölgesi
+Ortalama Maaş: $5,991
+Medyan Maaş: $6,030
+Gelir Eşitsizliği (Gini): 0.274
+🟢 Düşük eşitsizlik - İyi gelir dağılımı
+
+### EU Bölgesi
+Ortalama Maaş: $2,770
+Medyan Maaş: $2,122
+Gelir Eşitsizliği (Gini): 0.451
+🔴 Yüksek eşitsizlik - Gelir dağılımında adaletsizlik
+
+### US Bölgesi
+Ortalama Maaş: $112,431
+Medyan Maaş: $110,000
+Gelir Eşitsizliği (Gini): 0.268
+🟢 Düşük eşitsizlik - İyi gelir dağılımı
+
+
+## 3. STRATEJİK ÖNERİLER
+----------------------------------------
+
+🎯 En Yüksek Ortalama Maaş: US bölgesi
+💰 Ortalama: $112,431
+
+⚖️ En Adil Gelir Dağılımı: US bölgesi
+📊 Gini Katsayısı: 0.268
