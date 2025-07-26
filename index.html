@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uluslararası Maaş Analizi - Kapsamlı Rapor</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-chart-line"></i>
+                <span>Maaş Analizi Merkezi</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active">Ana Sayfa</a>
+                <a href="#executive-summary" class="nav-link">Yönetici Özeti</a>
+                <a href="#detailed-analysis" class="nav-link">Detaylı Analiz</a>
+                <a href="#data-explorer" class="nav-link">Veri Keşfi</a>
+                <a href="#methodology" class="nav-link">Metodoloji</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="gradient-text">Uluslararası</span>
+                    <span class="highlight">Maaş Analizi</span>
+                </h1>
+                <p class="hero-subtitle">
+                    TR, EU ve ABD bölgeleri arasında kapsamlı maaş karşılaştırması ve gelir eşitsizliği analizi
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">6,905</div>
+                        <div class="stat-label">Toplam Veri Kaydı</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">Analiz Edilen Bölge</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">2023</div>
+                        <div class="stat-label">Veri Yılı</div>
+                    </div>
+                </div>
+                <div class="hero-actions">
+                    <a href="#executive-summary" class="btn btn-primary">
+                        <i class="fas fa-chart-bar"></i>
+                        Analizi İncele
+                    </a>
+                    <a href="#data-explorer" class="btn btn-secondary">
+                        <i class="fas fa-database"></i>
+                        Veriyi Keşfet
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="chart-container">
+                    <div class="chart-placeholder">
+                        <canvas id="heroChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Findings Section -->
+    <section class="key-findings">
+        <div class="container">
+            <h2 class="section-title">🔍 Önemli Bulgular</h2>
+            <div class="findings-grid">
+                <div class="finding-card highlight-card">
+                    <div class="card-icon">🇺🇸</div>
+                    <h3>ABD Liderliği</h3>
+                    <div class="metric">$112,431</div>
+                    <p>Ortalama maaş ile açık ara lider</p>
+                    <div class="trend positive">
+                        <i class="fas fa-arrow-up"></i>
+                        19.07x Türkiye'den yüksek
+                    </div>
+                </div>
+                <div class="finding-card">
+                    <div class="card-icon">⚖️</div>
+                    <h3>Gelir Adaleti</h3>
+                    <div class="metric">0.268</div>
+                    <p>ABD'de en düşük Gini katsayısı</p>
+                    <div class="trend positive">
+                        <i class="fas fa-check-circle"></i>
+                        En adil dağılım
+                    </div>
+                </div>
+                <div class="finding-card">
+                    <div class="card-icon">🇹🇷</div>
+                    <h3>Türkiye Dengesi</h3>
+                    <div class="metric">0.274</div>
+                    <p>Düşük maaş, adil dağılım</p>
+                    <div class="trend neutral">
+                        <i class="fas fa-balance-scale"></i>
+                        Dengeli yapı
+                    </div>
+                </div>
+                <div class="finding-card warning-card">
+                    <div class="card-icon">🇪🇺</div>
+                    <h3>AB Paradoksu</h3>
+                    <div class="metric">0.451</div>
+                    <p>Yüksek eşitsizlik sorunu</p>
+                    <div class="trend negative">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        Dikkat gerektiriyor
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Executive Summary Section -->
+    <section id="executive-summary" class="executive-summary">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">🎯 Yönetici Özeti</h2>
+                <p class="section-subtitle">Analiz sonuçlarının kapsamlı değerlendirmesi</p>
+            </div>
+
+            <!-- Salary Comparison Table -->
+            <div class="analysis-block">
+                <h3 class="block-title">💰 Maaş Karşılaştırmaları (USD Bazında)</h3>
+                <div class="table-container">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Bölge</th>
+                                <th>Ortalama Maaş</th>
+                                <th>Medyan Maaş</th>
+                                <th>Kayıt Sayısı</th>
+                                <th>Göreceli Pozisyon</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="row-highlight">
+                                <td>
+                                    <span class="flag">🇺🇸</span>
+                                    <strong>Amerika Birleşik Devletleri</strong>
+                                </td>
+                                <td class="amount">$112,431</td>
+                                <td class="amount">$110,000</td>
+                                <td>1,363</td>
+                                <td><span class="badge success">Lider</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="flag">🇹🇷</span>
+                                    <strong>Türkiye</strong>
+                                </td>
+                                <td class="amount">$5,991</td>
+                                <td class="amount">$6,030</td>
+                                <td>1,343</td>
+                                <td><span class="badge neutral">Orta</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="flag">🇪🇺</span>
+                                    <strong>Avrupa Birliği</strong>
+                                </td>
+                                <td class="amount">$2,770</td>
+                                <td class="amount">$2,122</td>
+                                <td>65</td>
+                                <td><span class="badge warning">Düşük</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Income Inequality Analysis -->
+            <div class="analysis-block">
+                <h3 class="block-title">⚖️ Gelir Eşitsizliği Analizi (Gini Katsayısı)</h3>
+                <div class="gini-analysis">
+                    <div class="gini-cards">
+                        <div class="gini-card success">
+                            <div class="gini-header">
+                                <span class="flag">🇺🇸</span>
+                                <span class="region">ABD</span>
+                            </div>
+                            <div class="gini-value">0.268</div>
+                            <div class="gini-status">
+                                <i class="fas fa-check-circle"></i>
+                                Düşük eşitsizlik
+                            </div>
+                            <p>İyi gelir dağılımı</p>
+                        </div>
+                        <div class="gini-card success">
+                            <div class="gini-header">
+                                <span class="flag">🇹🇷</span>
+                                <span class="region">Türkiye</span>
+                            </div>
+                            <div class="gini-value">0.274</div>
+                            <div class="gini-status">
+                                <i class="fas fa-check-circle"></i>
+                                Düşük eşitsizlik
+                            </div>
+                            <p>İyi gelir dağılımı</p>
+                        </div>
+                        <div class="gini-card danger">
+                            <div class="gini-header">
+                                <span class="flag">🇪🇺</span>
+                                <span class="region">AB</span>
+                            </div>
+                            <div class="gini-value">0.451</div>
+                            <div class="gini-status">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                Yüksek eşitsizlik
+                            </div>
+                            <p>Gelir dağılımında adaletsizlik</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Strategic Insights -->
+            <div class="analysis-block">
+                <h3 class="block-title">🎯 Stratejik Çıkarımlar</h3>
+                <div class="insights-grid">
+                    <div class="insight-card">
+                        <div class="insight-icon success">🏆</div>
+                        <h4>En İyi Performans</h4>
+                        <p><strong>ABD:</strong> Hem yüksek maaş ($112,431) hem de adil dağılım (Gini: 0.268)</p>
+                    </div>
+                    <div class="insight-card">
+                        <div class="insight-icon warning">⚠️</div>
+                        <h4>AB Paradoksu</h4>
+                        <p>Beklenenin aksine düşük maaş seviyeleri ve yüksek gelir eşitsizliği</p>
+                    </div>
+                    <div class="insight-card">
+                        <div class="insight-icon info">📊</div>
+                        <h4>Türkiye Dengesi</h4>
+                        <p>Düşük maaş seviyesine rağmen adaletli gelir dağılımı</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Analysis Section -->
+    <section id="detailed-analysis" class="detailed-analysis">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">📊 Detaylı Analiz</h2>
+                <p class="section-subtitle">Derinlemesine istatistiksel değerlendirme</p>
+            </div>
+
+            <!-- Direct Comparison -->
+            <div class="analysis-block">
+                <h3 class="block-title">📈 Doğrudan Karşılaştırma Oranları</h3>
+                <div class="comparison-grid">
+                    <div class="comparison-card highlight">
+                        <div class="comparison-header">
+                            <span class="vs-indicator">🇹🇷 vs 🇺🇸</span>
+                            <h4>Türkiye vs Amerika</h4>
+                        </div>
+                        <div class="ratio-display">
+                            <span class="ratio">19.07x</span>
+                            <span class="ratio-label">ABD maaşları daha yüksek</span>
+                        </div>
+                        <div class="breakdown">
+                            <div class="breakdown-item">
+                                <span class="label">En büyük fark:</span>
+                                <span class="value">Muhasebe (43.59x)</span>
+                            </div>
+                            <div class="breakdown-item">
+                                <span class="label">En küçük fark:</span>
+                                <span class="value">İş Analisti (10.17x)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="comparison-card">
+                        <div class="comparison-header">
+                            <span class="vs-indicator">🇹🇷 vs 🇪🇺</span>
+                            <h4>Türkiye vs Avrupa Birliği</h4>
+                        </div>
+                        <div class="ratio-display">
+                            <span class="ratio">27.57x</span>
+                            <span class="ratio-label">AB maaşları daha yüksek</span>
+                        </div>
+                        <div class="alert">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            Bu oran dikkat çekici şekilde yüksek
+                        </div>
+                    </div>
+
+                    <div class="comparison-card">
+                        <div class="comparison-header">
+                            <span class="vs-indicator">🇪🇺 vs 🇺🇸</span>
+                            <h4>Avrupa Birliği vs Amerika</h4>
+                        </div>
+                        <div class="ratio-display">
+                            <span class="ratio">1.35x</span>
+                            <span class="ratio-label">ABD maaşları daha yüksek</span>
+                        </div>
+                        <div class="note">
+                            <i class="fas fa-info-circle"></i>
+                            İki bölge arasında nispeten dengeli fark
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experience Level Analysis -->
+            <div class="analysis-block">
+                <h3 class="block-title">📋 Deneyim Seviyesi Analizi</h3>
+                <div class="experience-analysis">
+                    <div class="region-experience">
+                        <h4>🇺🇸 Amerika Birleşik Devletleri</h4>
+                        <div class="experience-levels">
+                            <div class="level-card">
+                                <div class="level-header">Entry Level</div>
+                                <div class="level-salary">$49,980</div>
+                                <div class="level-count">275 kişi</div>
+                            </div>
+                            <div class="level-card">
+                                <div class="level-header">Mid Level</div>
+                                <div class="level-salary">$86,154</div>
+                                <div class="level-count">287 kişi</div>
+                            </div>
+                            <div class="level-card highlight">
+                                <div class="level-header">Senior</div>
+                                <div class="level-salary">$144,529</div>
+                                <div class="level-count">794 kişi</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="region-experience">
+                        <h4>🇹🇷 Türkiye</h4>
+                        <div class="experience-levels">
+                            <div class="level-card">
+                                <div class="level-header">Entry Level</div>
+                                <div class="level-salary">$2,638</div>
+                                <div class="level-count">283 kişi</div>
+                            </div>
+                            <div class="level-card">
+                                <div class="level-header">Mid Level</div>
+                                <div class="level-salary">$4,455</div>
+                                <div class="level-count">267 kişi</div>
+                            </div>
+                            <div class="level-card highlight">
+                                <div class="level-header">Senior</div>
+                                <div class="level-salary">$7,783</div>
+                                <div class="level-count">785 kişi</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="region-experience">
+                        <h4>🇪🇺 Avrupa Birliği</h4>
+                        <div class="data-limitation">
+                            <i class="fas fa-exclamation-circle"></i>
+                            <p>Veriler sınırlı (65 kayıt, çoğu "Unknown" seviye)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Data Explorer Section -->
+    <section id="data-explorer" class="data-explorer">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">🔍 Veri Keşfi</h2>
+                <p class="section-subtitle">İnteraktif veri analiz araçları</p>
+            </div>
+
+            <!-- Visualization -->
+            <div class="analysis-block">
+                <h3 class="block-title">📊 Görselleştirmeler</h3>
+                <div class="visualization-container">
+                    <div class="chart-tabs">
+                        <button class="tab-btn active" data-chart="salary-comparison">Maaş Karşılaştırması</button>
+                        <button class="tab-btn" data-chart="gini-analysis">Gini Analizi</button>
+                        <button class="tab-btn" data-chart="experience-breakdown">Deneyim Dağılımı</button>
+                    </div>
+                    <div class="chart-display">
+                        <canvas id="mainChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data Statistics -->
+            <div class="analysis-block">
+                <h3 class="block-title">📈 Veri İstatistikleri</h3>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">📊</div>
+                        <div class="stat-info">
+                            <div class="stat-value">6,905</div>
+                            <div class="stat-label">Toplam Kayıt</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🌍</div>
+                        <div class="stat-info">
+                            <div class="stat-value">3</div>
+                            <div class="stat-label">Analiz Edilen Bölge</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">💱</div>
+                        <div class="stat-info">
+                            <div class="stat-value">19.07</div>
+                            <div class="stat-label">TRY/USD Kuru</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">💶</div>
+                        <div class="stat-info">
+                            <div class="stat-value">1.08</div>
+                            <div class="stat-label">EUR/USD Kuru</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Methodology Section -->
+    <section id="methodology" class="methodology">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">🔬 Metodoloji</h2>
+                <p class="section-subtitle">Analiz yöntemleri ve teknik detaylar</p>
+            </div>
+
+            <div class="methodology-content">
+                <div class="method-card">
+                    <div class="method-icon">📊</div>
+                    <h3>Veri Toplama</h3>
+                    <p>2023 yılı maaş verileri, toplam 6,905 kayıt üzerinden analiz edilmiştir. Veriler TR, EU ve US bölgelerini kapsamaktadır.</p>
+                </div>
+                <div class="method-card">
+                    <div class="method-icon">💱</div>
+                    <h3>Döviz Kuru Normalização</h3>
+                    <p>Tüm maaş verileri USD bazında standardize edilmiştir. TRY/USD: 19.07, EUR/USD: 1.08 kurları kullanılmıştır.</p>
+                </div>
+                <div class="method-card">
+                    <div class="method-icon">⚖️</div>
+                    <h3>Gini Katsayısı Hesaplama</h3>
+                    <p>Gelir eşitsizliği ölçümü için Gini katsayısı hesaplanmıştır. 0-1 arası değer alır, 0 tam eşitlik, 1 tam eşitsizlik anlamına gelir.</p>
+                </div>
+                <div class="method-card">
+                    <div class="method-icon">📈</div>
+                    <h3>İstatistiksel Analiz</h3>
+                    <p>Ortalama, medyan, standart sapma ve percentile analizleri gerçekleştirilmiştir. Python pandas ve numpy kütüphaneleri kullanılmıştır.</p>
+                </div>
+            </div>
+
+            <div class="technical-details">
+                <h3>🔧 Teknik Detaylar</h3>
+                <div class="code-block">
+                    <pre><code>
+# Gini Katsayısı Hesaplama
+def calculate_gini(salaries):
+    sorted_salaries = np.sort(salaries)
+    n = len(salaries)
+    cumsum = np.cumsum(sorted_salaries)
+    return (n + 1 - 2 * np.sum(cumsum) / cumsum[-1]) / n
+
+# Döviz Kuru Dönüşümü
+def convert_to_usd(amount, currency, rates):
+    if currency == 'TRY':
+        return amount / rates['TRY_USD']
+    elif currency == 'EUR':
+        return amount * rates['EUR_USD']
+    return amount
+                    </code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>📊 Analiz Detayları</h3>
+                    <p>Analiz Tarihi: 26 Temmuz 2025</p>
+                    <p>Veri Yılı: 2023</p>
+                    <p>Toplam Kayıt: 6,905</p>
+                </div>
+                <div class="footer-section">
+                    <h3>📁 Ek Belgeler</h3>
+                    <ul>
+                        <li><a href="salary_analysis_comprehensive.png" target="_blank">📊 Detaylı Grafikler</a></li>
+                        <li><a href="salary_analysis_report.txt" target="_blank">📄 Teknik Rapor</a></li>
+                        <li><a href="salary_analysis.py" target="_blank">💻 Analiz Kodu</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>🎯 Sonuç</h3>
+                    <p>Bu analiz, ABD'nin hem maaş seviyeleri hem de gelir adaleti açısından açık ara önde olduğunu göstermektedir.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Uluslararası Maaş Analizi. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
